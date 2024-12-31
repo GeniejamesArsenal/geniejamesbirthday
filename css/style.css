@@ -1,0 +1,126 @@
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #F3EDC8; /* Background light color */
+}
+
+/* Countdown Wrapper */
+.countdown-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #7D0A0A; /* Dark red color for text */
+    font-size: 3rem;
+    font-weight: normal;
+    text-align: center;
+    padding: 20px;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+/* Content Container */
+.content {
+    display: none;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Card Styling */
+.card {
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    background-color: #EAD196; /* Soft yellow for card background */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideIn 1s forwards;
+}
+
+/* Card Header */
+.card h1 {
+    margin-bottom: 15px;
+    font-weight: normal;
+    color: #7D0A0A; /* Dark red color for heading */
+}
+
+/* Countdown Display */
+.countdown {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #BF3131; /* Lighter red for countdown text */
+}
+
+/* Age Display */
+.age {
+    font-size: 1.2rem;
+    color: #BF3131; /* Matching age display color with countdown */
+    margin-bottom: 15px;
+}
+
+/* Image Slideshow */
+#slideshowImage {
+    width: 100%;
+    height: auto;
+    max-height: 60vh;
+    border-radius: 8px;
+    margin: 15px 0;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-out forwards;
+}
+
+/* Quote Container */
+#quoteContainer {
+    font-style: italic;
+    color: #7D0A0A; /* Dark red for quote text */
+    margin-top: 10px;
+    opacity: 0;
+    animation: fadeIn 2s ease-out forwards;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .countdown-wrapper {
+        font-size: 2rem;
+    }
+
+    .card h1 {
+        font-size: 1.5rem;
+    }
+
+    .countdown {
+        font-size: 1rem;
+    }
+
+    .age {
+        font-size: 1rem;
+    }
+}
